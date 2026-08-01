@@ -164,10 +164,12 @@
     ],
     skills: ["Python / FastAPI / SQL / Redis / Docker", "DeepSeek API / MCP / HelloAgents / 多智能体", "Git / Linux / Vercel / CI/CD / AI 编程工具"],
     projects: [
-      "1. Trip Planner 智能旅行规划 (FastAPI + DeepSeek API)",
+      "1. CVE 漏洞智能查询系统 (DeepSeek API + PyQt5 + 爬虫)",
+      "   🏆 服务外包大赛三等奖 · 自然语言查漏洞 · NVD 日更 2 万+ 条",
+      "2. 智能旅行助手 (FastAPI + HelloAgents + MCP + Vue3)",
       "   https://github.com/arousro/trip-planner",
-      "2. 多智能体协作系统 (HelloAgents + MCP)",
-      "3. AI 对话应用集成 (流式输出 + 工具调用)"
+      "3. 博客系统 (Flask + SQLAlchemy)",
+      "   https://github.com/arousro/blog-system"
     ],
     contact: ["GitHub: https://github.com/arousro", "Email: 2868548883@qq.com"],
     whoami: ["彭波 · Software Engineer · AI Integration"]
