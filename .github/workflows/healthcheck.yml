@@ -1,0 +1,22 @@
+name: Site Health Check
+on: [push, workflow_dispatch]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch live site
+        run: |
+          for i in $(seq 1 12); do
+            code=$(curl -s -o /tmp/site.html -w "%{http_code}" https://arousro.github.io/personal-site/)
+            if [ "$code" = "200" ]; then
+              if grep -q "彭波" /tmp/site.html; then
+                echo "SITE_OK: HTTP 200, content verified from GitHub servers"
+                exit 0
+              fi
+              echo "SITE_PARTIAL: HTTP 200 but content mismatch"
+              exit 1
+            fi
+            sleep 10
+          done
+          echo "SITE_FAIL: last status $code"
+          exit 1
