@@ -140,16 +140,33 @@
         <div class="projects-grid">
           <article class="project-card" data-tilt data-reveal>
             <div class="project-top">
-              <span class="project-icon">🗺️</span>
-              <span class="project-lang">Python · FastAPI · LLM</span>
+              <span class="project-icon">🛡️</span>
+              <span class="project-lang">Python · DeepSeek API · PyQt5</span>
             </div>
-            <h3>Trip Planner 智能旅行规划</h3>
+            <h3>CVE 漏洞智能查询系统</h3>
             <p>
-              基于大模型的智能旅行规划工具：用户输入目的地与偏好，自动生成行程、推荐景点与美食，
-              支持多日行程编排与路线优化。
+              集成 DeepSeek 大模型，将自然语言查询解析为结构化条件（CVE ID / 漏洞关键词）检索本地漏洞库，
+              支持多轮对话追问，API 平均响应 &lt;3 秒。爬虫每日增量抓取 NVD 数据库，累计入库 2 万余条漏洞记录。
             </p>
             <div class="tags">
-              <span class="tag">FastAPI</span><span class="tag">DeepSeek API</span><span class="tag">多智能体</span>
+              <span class="tag">DeepSeek API</span><span class="tag">爬虫</span><span class="tag">PyQt5</span>
+            </div>
+            <span class="project-badge">🏆 全国服务外包创新创业大赛 三等奖</span>
+          </article>
+
+          <article class="project-card" data-tilt data-reveal>
+            <div class="project-top">
+              <span class="project-icon">🗺️</span>
+              <span class="project-lang">FastAPI · HelloAgents · MCP · Vue3</span>
+            </div>
+            <h3>智能旅行助手 Trip Planner</h3>
+            <p>
+              基于 HelloAgents 的多智能体协作系统：4 个专用 Agent（景点 / 天气 / 酒店 / 行程）以 ReAct 范式
+              串行协作，通过 MCP 协议接入高德地图，一句话需求生成完整旅行方案；实现 LLM 输出容错
+              （JSON 智能修复 + Pydantic 校验 + 自动重试）与 diskcache 缓存。
+            </p>
+            <div class="tags">
+              <span class="tag">FastAPI</span><span class="tag">MCP</span><span class="tag">多智能体</span><span class="tag">Vue3</span>
             </div>
             <a href="https://github.com/arousro/trip-planner" class="project-link" target="_blank" rel="noopener">
               GitHub ↗
@@ -158,36 +175,18 @@
 
           <article class="project-card" data-tilt data-reveal>
             <div class="project-top">
-              <span class="project-icon">🤝</span>
-              <span class="project-lang">Python · MCP · Agent</span>
+              <span class="project-icon">📝</span>
+              <span class="project-lang">Flask · SQLAlchemy · Flask-Login</span>
             </div>
-            <h3>多智能体协作系统</h3>
+            <h3>博客系统 Blog System</h3>
             <p>
-              基于 HelloAgents 与 MCP 协议的多智能体协作框架实践，实现多个 AI Agent 分工协作、
-              工具调用与任务编排，探索 AI 落地的工程化方案。
+              功能完整的多用户博客：文章分类与标签、评论、全文搜索、点赞、用户关注与个人主页、头像上传，
+              以及基于角色的后台管理（用户 / 文章 / 评论 / 内容管理）。
             </p>
             <div class="tags">
-              <span class="tag">HelloAgents</span><span class="tag">MCP</span><span class="tag">Multi-Agent</span>
+              <span class="tag">Flask</span><span class="tag">SQLAlchemy</span><span class="tag">认证/权限</span>
             </div>
-            <a href="https://github.com/arousro" class="project-link" target="_blank" rel="noopener">
-              GitHub ↗
-            </a>
-          </article>
-
-          <article class="project-card" data-tilt data-reveal>
-            <div class="project-top">
-              <span class="project-icon">💬</span>
-              <span class="project-lang">Python · API · LLM</span>
-            </div>
-            <h3>AI 对话应用集成</h3>
-            <p>
-              封装大模型 API 为通用对话服务：流式输出、上下文管理、工具调用与错误重试机制，
-              支持快速接入业务场景。
-            </p>
-            <div class="tags">
-              <span class="tag">DeepSeek API</span><span class="tag">Streaming</span><span class="tag">FastAPI</span>
-            </div>
-            <a href="https://github.com/arousro" class="project-link" target="_blank" rel="noopener">
+            <a href="https://github.com/arousro/blog-system" class="project-link" target="_blank" rel="noopener">
               GitHub ↗
             </a>
           </article>
