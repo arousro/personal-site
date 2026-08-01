@@ -15,19 +15,21 @@
     <div class="blob blob-2"></div>
     <div class="blob blob-3"></div>
   </div>
+  <canvas id="matrix" aria-hidden="true"></canvas>
   <div class="cyber-grid" aria-hidden="true"></div>
   <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- 滚动进度条 -->
+  <div id="progress-bar" aria-hidden="true"></div>
 
   <!-- 导航栏 -->
   <header class="nav">
     <nav class="nav-inner">
-      <a href="#hero" class="nav-logo">&lt;pb /&gt;</a>
       <ul class="nav-links">
-        <li><a href="#about" class="nav-link">关于</a></li>
-        <li><a href="#skills" class="nav-link">技能</a></li>
-        <li><a href="#projects" class="nav-link">项目</a></li>
-        <li><a href="#education" class="nav-link">教育</a></li>
-        <li><a href="#contact" class="nav-link">联系</a></li>
+        <li><a href="#about" class="nav-link">个人信息</a></li>
+        <li><a href="#skills" class="nav-link">技术能力</a></li>
+        <li><a href="#projects" class="nav-link">项目经历</a></li>
+        <li><a href="#contact" class="nav-link">联系方式</a></li>
       </ul>
       <a href="#contact" class="btn btn-primary btn-sm">联系我</a>
     </nav>
@@ -37,51 +39,50 @@
     <!-- 首屏 -->
     <section id="hero" class="hero">
       <div class="hero-inner">
-        <p class="hero-hello" data-reveal>你好，我是</p>
-        <h1 class="hero-name glitch" data-reveal data-text="彭波">彭波</h1>
+        <h1 class="hero-name glitch" data-reveal data-text="AI 产品工程师" aria-label="AI 产品工程师">AI 产品工程师</h1>
+        <p class="hero-sub" data-reveal>
+          <span class="sub-name">彭波</span> · 软件工程 2026 届 · 浙江工业大学之江学院
+        </p>
         <p class="hero-roles" data-reveal>
           <span id="typed" class="typed"></span><span class="cursor">|</span>
         </p>
         <p class="hero-desc" data-reveal>
-          软件工程 2026 届毕业生 · Python 后端开发 · AI 应用与多智能体集成。<br>
+          Python 后端开发 · AI 应用与多智能体集成。<br>
           正在寻找 <strong>AI 产品工程师实习</strong> 机会。
         </p>
         <div class="hero-actions" data-reveal>
           <a href="#projects" class="btn btn-primary">查看项目</a>
           <a href="#contact" class="btn btn-ghost">联系我</a>
         </div>
-        <div class="hero-stats" data-reveal>
-          <div class="stat"><span class="stat-num">3+</span><span class="stat-label">年编程经验</span></div>
-          <div class="stat"><span class="stat-num">10+</span><span class="stat-label">个人项目</span></div>
-          <div class="stat"><span class="stat-num">6+</span><span class="stat-label">AI 工具实践</span></div>
-        </div>
+        <p class="hero-hint" data-reveal>
+          <span class="kbd">1</span>–<span class="kbd">5</span> 快速跳转区块 · 或与右侧终端交互，输入 <span class="kbd">help</span>
+        </p>
       </div>
-      <!-- 终端风格装饰卡 -->
+
+      <!-- 可交互终端 -->
       <div class="hero-terminal" data-reveal>
         <div class="term-head">
           <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="term-title">developer@pb: ~</span>
+          <span class="term-title">pb@portfolio:~</span>
         </div>
-        <div class="term-body">
-          <p><span class="t-prompt">$</span> whoami</p>
-          <p class="t-out">彭波 · Software Engineer</p>
-          <p><span class="t-prompt">$</span> cat stack.txt</p>
-          <p class="t-out">Python · FastAPI · DeepSeek API</p>
-          <p class="t-out">MCP · Multi-Agent · Docker</p>
-          <p><span class="t-prompt">$</span> ./start-ai-career.sh</p>
-          <p class="t-out ok">✔ 正在寻找 AI 产品工程师实习...</p>
+        <div class="term-body" id="term-body">
+          <div id="term-output"></div>
+          <div class="term-input-line">
+            <span class="t-prompt">$</span>
+            <input id="term-input" type="text" autocomplete="off" spellcheck="false" aria-label="终端输入">
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 关于 -->
+    <!-- 个人信息 -->
     <section id="about" class="section">
       <div class="section-inner">
-        <h2 class="section-title" data-reveal><span class="title-mark">//</span> 关于我</h2>
+        <h2 class="section-title" data-reveal><span class="title-mark">//</span> 个人信息</h2>
         <div class="about-grid">
           <div class="about-card" data-reveal>
             <p>
-              我是彭波，浙江工业大学之江学院软件工程专业 2026 届毕业生。热爱用代码解决问题，
+              彭波，浙江工业大学之江学院软件工程专业 2026 届毕业生。热爱用代码解决问题，
               尤其擅长 <strong>Python 后端开发</strong> 与 <strong>AI 能力集成</strong>。
             </p>
             <p>
@@ -99,12 +100,12 @@
       </div>
     </section>
 
-    <!-- 技能 -->
+    <!-- 技术能力 -->
     <section id="skills" class="section">
       <div class="section-inner">
-        <h2 class="section-title" data-reveal><span class="title-mark">//</span> 技能栈</h2>
+        <h2 class="section-title" data-reveal><span class="title-mark">//</span> 技术能力</h2>
         <div class="skills-grid">
-          <div class="skill-card" data-reveal>
+          <div class="skill-card" data-tilt data-reveal>
             <h3>🐍 后端开发</h3>
             <div class="tags">
               <span class="tag">Python</span><span class="tag">FastAPI</span>
@@ -112,7 +113,7 @@
               <span class="tag">Redis</span><span class="tag">Docker</span>
             </div>
           </div>
-          <div class="skill-card" data-reveal>
+          <div class="skill-card" data-tilt data-reveal>
             <h3>🤖 AI 应用</h3>
             <div class="tags">
               <span class="tag">DeepSeek API</span><span class="tag">MCP</span>
@@ -120,7 +121,7 @@
               <span class="tag">Prompt 工程</span><span class="tag">RAG</span>
             </div>
           </div>
-          <div class="skill-card" data-reveal>
+          <div class="skill-card" data-tilt data-reveal>
             <h3>🧰 工程工具</h3>
             <div class="tags">
               <span class="tag">Git / GitHub</span><span class="tag">Linux</span>
@@ -132,12 +133,12 @@
       </div>
     </section>
 
-    <!-- 项目 -->
+    <!-- 项目经历 -->
     <section id="projects" class="section">
       <div class="section-inner">
         <h2 class="section-title" data-reveal><span class="title-mark">//</span> 项目经历</h2>
         <div class="projects-grid">
-          <article class="project-card" data-reveal>
+          <article class="project-card" data-tilt data-reveal>
             <div class="project-top">
               <span class="project-icon">🗺️</span>
               <span class="project-lang">Python · FastAPI · LLM</span>
@@ -155,7 +156,7 @@
             </a>
           </article>
 
-          <article class="project-card" data-reveal>
+          <article class="project-card" data-tilt data-reveal>
             <div class="project-top">
               <span class="project-icon">🤝</span>
               <span class="project-lang">Python · MCP · Agent</span>
@@ -173,7 +174,7 @@
             </a>
           </article>
 
-          <article class="project-card" data-reveal>
+          <article class="project-card" data-tilt data-reveal>
             <div class="project-top">
               <span class="project-icon">💬</span>
               <span class="project-lang">Python · API · LLM</span>
@@ -194,7 +195,7 @@
       </div>
     </section>
 
-    <!-- 教育 -->
+    <!-- 教育背景 -->
     <section id="education" class="section">
       <div class="section-inner">
         <h2 class="section-title" data-reveal><span class="title-mark">//</span> 教育背景</h2>
@@ -212,10 +213,10 @@
       </div>
     </section>
 
-    <!-- 联系 -->
+    <!-- 联系方式 -->
     <section id="contact" class="section">
       <div class="section-inner">
-        <h2 class="section-title" data-reveal><span class="title-mark">//</span> 联系我</h2>
+        <h2 class="section-title" data-reveal><span class="title-mark">//</span> 联系方式</h2>
         <p class="contact-desc" data-reveal>欢迎交流技术、合作项目或提供实习机会 👋</p>
         <div class="contact-cards" data-reveal>
           <a href="https://github.com/arousro" class="contact-card" target="_blank" rel="noopener">
@@ -236,6 +237,9 @@
   <footer class="footer">
     <p><span>&gt;_</span> © 2026 彭波 · 本站由 AI Agent 辅助生成，手动打磨细节</p>
   </footer>
+
+  <!-- 回到顶部 -->
+  <button id="back-to-top" aria-label="回到顶部">↑</button>
 
   <script src="js/main.js"></script>
 </body>
