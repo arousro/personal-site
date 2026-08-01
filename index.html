@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="彭波 - 软件工程应届生，Python 后端与 AI 应用开发">
+  <title>彭波 | Python 后端 · AI 应用开发</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 背景装饰 -->
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- 导航栏 -->
+  <header class="nav">
+    <nav class="nav-inner">
+      <a href="#hero" class="nav-logo">&lt;pb /&gt;</a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">关于</a></li>
+        <li><a href="#skills" class="nav-link">技能</a></li>
+        <li><a href="#projects" class="nav-link">项目</a></li>
+        <li><a href="#education" class="nav-link">教育</a></li>
+        <li><a href="#contact" class="nav-link">联系</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary btn-sm">联系我</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 首屏 -->
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <p class="hero-hello" data-reveal>你好，我是</p>
+        <h1 class="hero-name" data-reveal>彭波</h1>
+        <p class="hero-roles" data-reveal>
+          <span id="typed" class="typed"></span><span class="cursor">|</span>
+        </p>
+        <p class="hero-desc" data-reveal>
+          软件工程 2026 届毕业生 · Python 后端开发 · AI 应用与多智能体集成。<br>
+          正在寻找 <strong>AI 产品工程师实习</strong> 机会。
+        </p>
+        <div class="hero-actions" data-reveal>
+          <a href="#projects" class="btn btn-primary">查看项目</a>
+          <a href="#contact" class="btn btn-ghost">联系我</a>
+        </div>
+        <div class="hero-stats" data-reveal>
+          <div class="stat"><span class="stat-num">3+</span><span class="stat-label">年编程经验</span></div>
+          <div class="stat"><span class="stat-num">10+</span><span class="stat-label">个人项目</span></div>
+          <div class="stat"><span class="stat-num">6+</span><span class="stat-label">AI 工具实践</span></div>
+        </div>
+      </div>
+      <!-- 终端风格装饰卡 -->
+      <div class="hero-terminal" data-reveal>
+        <div class="term-head">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="term-title">developer@pb: ~</span>
+        </div>
+        <div class="term-body">
+          <p><span class="t-prompt">$</span> whoami</p>
+          <p class="t-out">彭波 · Software Engineer</p>
+          <p><span class="t-prompt">$</span> cat stack.txt</p>
+          <p class="t-out">Python · FastAPI · DeepSeek API</p>
+          <p class="t-out">MCP · Multi-Agent · Docker</p>
+          <p><span class="t-prompt">$</span> ./start-ai-career.sh</p>
+          <p class="t-out ok">✔ 正在寻找 AI 产品工程师实习...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 关于 -->
+    <section id="about" class="section">
+      <div class="section-inner">
+        <h2 class="section-title" data-reveal><span class="title-mark">#</span> 关于我</h2>
+        <div class="about-grid">
+          <div class="about-card" data-reveal>
+            <p>
+              我是彭波，浙江工业大学之江学院软件工程专业 2026 届毕业生。热爱用代码解决问题，
+              尤其擅长 <strong>Python 后端开发</strong> 与 <strong>AI 能力集成</strong>。
+            </p>
+            <p>
+              熟悉 DeepSeek API、MCP 协议与多智能体架构，喜欢把大模型能力落地成真实可用的产品。
+              注重代码质量与交付体验，能独立完成从需求分析、开发到部署上线的完整流程。
+            </p>
+          </div>
+          <div class="about-info" data-reveal>
+            <div class="info-row"><span>🎓 学历</span><span>本科 · 软件工程</span></div>
+            <div class="info-row"><span>📍 城市</span><span>杭州</span></div>
+            <div class="info-row"><span>💼 求职意向</span><span>AI 产品工程师（实习）</span></div>
+            <div class="info-row"><span>⚙️ 主技术栈</span><span>Python / FastAPI</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能 -->
+    <section id="skills" class="section">
+      <div class="section-inner">
+        <h2 class="section-title" data-reveal><span class="title-mark">#</span> 技能栈</h2>
+        <div class="skills-grid">
+          <div class="skill-card" data-reveal>
+            <h3>🐍 后端开发</h3>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">FastAPI</span>
+              <span class="tag">RESTful API</span><span class="tag">SQL</span>
+              <span class="tag">Redis</span><span class="tag">Docker</span>
+            </div>
+          </div>
+          <div class="skill-card" data-reveal>
+            <h3>🤖 AI 应用</h3>
+            <div class="tags">
+              <span class="tag">DeepSeek API</span><span class="tag">MCP</span>
+              <span class="tag">HelloAgents</span><span class="tag">多智能体</span>
+              <span class="tag">Prompt 工程</span><span class="tag">RAG</span>
+            </div>
+          </div>
+          <div class="skill-card" data-reveal>
+            <h3>🧰 工程工具</h3>
+            <div class="tags">
+              <span class="tag">Git / GitHub</span><span class="tag">Linux</span>
+              <span class="tag">Vercel</span><span class="tag">CI/CD</span>
+              <span class="tag">AI 编程工具</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 项目 -->
+    <section id="projects" class="section">
+      <div class="section-inner">
+        <h2 class="section-title" data-reveal><span class="title-mark">#</span> 项目经历</h2>
+        <div class="projects-grid">
+          <article class="project-card" data-reveal>
+            <div class="project-top">
+              <span class="project-icon">🗺️</span>
+              <span class="project-lang">Python · FastAPI · LLM</span>
+            </div>
+            <h3>Trip Planner 智能旅行规划</h3>
+            <p>
+              基于大模型的智能旅行规划工具：用户输入目的地与偏好，自动生成行程、推荐景点与美食，
+              支持多日行程编排与路线优化。
+            </p>
+            <div class="tags">
+              <span class="tag">FastAPI</span><span class="tag">DeepSeek API</span><span class="tag">多智能体</span>
+            </div>
+            <a href="https://github.com/arousro/trip-planner" class="project-link" target="_blank" rel="noopener">
+              GitHub ↗
+            </a>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <div class="project-top">
+              <span class="project-icon">🤝</span>
+              <span class="project-lang">Python · MCP · Agent</span>
+            </div>
+            <h3>多智能体协作系统</h3>
+            <p>
+              基于 HelloAgents 与 MCP 协议的多智能体协作框架实践，实现多个 AI Agent 分工协作、
+              工具调用与任务编排，探索 AI 落地的工程化方案。
+            </p>
+            <div class="tags">
+              <span class="tag">HelloAgents</span><span class="tag">MCP</span><span class="tag">Multi-Agent</span>
+            </div>
+            <a href="https://github.com/arousro" class="project-link" target="_blank" rel="noopener">
+              GitHub ↗
+            </a>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <div class="project-top">
+              <span class="project-icon">💬</span>
+              <span class="project-lang">Python · API · LLM</span>
+            </div>
+            <h3>AI 对话应用集成</h3>
+            <p>
+              封装大模型 API 为通用对话服务：流式输出、上下文管理、工具调用与错误重试机制，
+              支持快速接入业务场景。
+            </p>
+            <div class="tags">
+              <span class="tag">DeepSeek API</span><span class="tag">Streaming</span><span class="tag">FastAPI</span>
+            </div>
+            <a href="https://github.com/arousro" class="project-link" target="_blank" rel="noopener">
+              GitHub ↗
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 教育 -->
+    <section id="education" class="section">
+      <div class="section-inner">
+        <h2 class="section-title" data-reveal><span class="title-mark">#</span> 教育背景</h2>
+        <div class="edu-card" data-reveal>
+          <div class="edu-head">
+            <h3>浙江工业大学之江学院</h3>
+            <span class="edu-time">2022 - 2026</span>
+          </div>
+          <p>软件工程 · 本科</p>
+          <ul class="edu-list">
+            <li>主修：数据结构与算法、操作系统、计算机网络、数据库原理</li>
+            <li>自学方向：Python 后端开发、AI 应用集成、多智能体系统</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系 -->
+    <section id="contact" class="section">
+      <div class="section-inner">
+        <h2 class="section-title" data-reveal><span class="title-mark">#</span> 联系我</h2>
+        <p class="contact-desc" data-reveal>欢迎交流技术、合作项目或提供实习机会 👋</p>
+        <div class="contact-cards" data-reveal>
+          <a href="https://github.com/arousro" class="contact-card" target="_blank" rel="noopener">
+            <span class="contact-icon">🐙</span>
+            <span class="contact-name">GitHub</span>
+            <span class="contact-value">github.com/arousro</span>
+          </a>
+          <a href="mailto:2868548883@qq.com" class="contact-card">
+            <span class="contact-icon">📧</span>
+            <span class="contact-name">Email</span>
+            <span class="contact-value">2868548883@qq.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 彭波 · 本站由 AI Agent 辅助生成，手动打磨细节</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
